@@ -30,9 +30,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-
-
-
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -43,8 +40,8 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Append</h1>
+        <img src="assets/img/logo.png" alt="">
+        <!-- <h1>Append</h1> -->
         <span>.</span>
       </a>
 
@@ -1219,7 +1216,7 @@
           } else {
             // Send data to SheetDB
             // axios.post('https://sheetdb.io/api/v1/3ufutxy0vl8m8', jsonData)
-            // axios.post('https://sheetdb.io/api/v1/hu390hqhskoqu', jsonData)
+            axios.post('https://sheetdb.io/api/v1/hu390hqhskoqu', jsonData)
             then(response => {
               console.log(response.data);
               alert("Data submitted successfully!");
@@ -1254,7 +1251,7 @@
     function isDuplicateEmail(email) {
       // Make an API call to SheetDB to check if the email exists
       // return axios.get(`https://sheetdb.io/api/v1/3ufutxy0vl8m8/search?email=${email}`)
-      // return axios.get(`https://sheetdb.io/api/v1/hu390hqhskoqu/search?email=${email}`)
+      return axios.get(`https://sheetdb.io/api/v1/hu390hqhskoqu/search?email=${email}`)
       then(response => {
         // If any record with the provided email exists, return true; otherwise, return false
         return response.data.length > 0;
@@ -1342,14 +1339,14 @@
   </div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
